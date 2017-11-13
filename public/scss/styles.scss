@@ -1,0 +1,117 @@
+@import "./reset/basic-reset";
+
+$back-color: skyblue;
+$text-color: black;
+$transition-time: 0s;
+
+body {
+    height: 100vh; 
+    background-color: $back-color;
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    margin-bottom: 3rem;
+}
+
+h1, p {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    color: $text-color;
+    text-align: center;
+}
+
+#settings {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 2rem;
+    transition: .3s;
+    cursor: pointer;
+}
+
+#settings:hover {
+    color: #222;
+}
+
+#settings:active {
+    transform: rotate(30deg);
+}
+
+.header {
+    text-align: center;
+    padding: 30px;
+}
+
+.body {
+    height: 100%;
+    display: flex;
+}
+
+.left-section, .right-section {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.left-section button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#tallys, #time-tracker {
+    padding: 30px 30px 10px 30px;
+}
+
+#modal {
+    transition: $transition-time;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.hidden, .hidden button {
+    display: none;
+    visibility: hidden;
+}
+
+#modal::before {
+    background-color: black;
+    transition: $transition-time;
+    opacity: .9;
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#modal > div {
+    transition: $transition-time;
+    position: relative;
+    padding: 30px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+#modal input {
+    transition: $transition-time;
+    padding: 5px;
+    margin-bottom: 20px;
+    width: 60vw;
+    max-width: 300px;
+
+}
+
