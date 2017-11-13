@@ -112,6 +112,15 @@ h1, p {
     margin-bottom: 20px;
     width: 60vw;
     max-width: 300px;
+}
 
+@media only screen and (max-width: 599px) {
+    .left-section, .right-section {
+        width: 100%;
+    }
+
+    .body {
+        flex-direction: column-reverse;
+    }
 }
 
