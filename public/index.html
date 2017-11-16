@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Learning Gulp</title>
+    <title>Progress Tracker</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="dist/styles.css" />
 </head>
 <body>
-    <i id="settings" class="material-icons">settings</i>
+    <i id="settings-icon" class="material-icons">settings</i>
     <div class="header">
-        <h1>Feed Your Hero</h1>
+        <h1 id="main-title">Feed Your Hero</h1>
         <p class="greeting"></p>
     </div>
     <div class="body">
         <div class="left-section">
-            <h1>Times</h1>
+            <h1 id="tally-title">Times</h1>
             <div id="tallys">
 
             </div>
@@ -25,7 +25,7 @@
             </button>
         </div>
         <div class="right-section">
-            <h1>Days</h1>
+            <h1 id="time-counter-title">Days</h1>
             <div id="time-tracker">
                 <h1 id="day-counter">
                     
@@ -34,13 +34,20 @@
         </div>
     </div>
     <div id="modal" class="hidden">
-        <div>
-            <h1>Settings</h1>
-            <button id="reset">Reset</button>
-            <input placeholder="main title" />
-            <input placeholder="tally title" />
-            <input placeholder="day counter title" />
-            
+        <div id="settings-menu">
+            <form id="settings-form">
+                <h1>Settings</h1>
+                <button id="reset" type="button">Reset</button>
+                <small>Main Title</small>
+                <input id="set-main-title" />
+                <small>Tally Title</small>
+                <input id="set-tally-title" />
+                <small>Tally Button Title</small>
+                <input id="set-add-tally-title" />
+                <small>Time Counter Title</small>
+                <input id="set-time-counter-title" />
+                <button>Save Changes</button>
+            </form>
         </div>
     </div>
 
